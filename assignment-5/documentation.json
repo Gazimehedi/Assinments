@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "0f562b07-0b20-4cc4-abab-5c38623c2b46",
+		"name": "Todo Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20956795"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\":\"mehedi\",\r\n    \"LastName\":\"hasan\",\r\n    \"Username\":\"mehedi\",\r\n    \"Email\": \"gazimehedihasan2@gmail.com\",\r\n    \"Password\": \"mehedi1234\",\r\n    \"Mobile\": \"123\",\r\n    \"City\": \"cumilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/register",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"gazimehedihasan2@gmail.com\",\r\n    \"Password\": \"mehedi1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"gazimehedihasan2@gmail.com\",\r\n    \"Password\": \"mehedi1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/logout",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\":\"mehedi\",\r\n    \"LastName\":\"hasan\",\r\n    \"Email\": \"gazimehedihasan2@gmail.com\",\r\n    \"Mobile\": \"123\",\r\n    \"City\": \"Dhaka\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/update-user",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Subject\": \"test5\",\r\n    \"Description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/create-todo",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"create-todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Subject\": \"test1-update\",\r\n    \"Description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/update-todo/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"update-todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63c2cf488dc78362a8a940b2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Status\": \"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/update-todo-status/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"update-todo-status",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63c2cfc141951f982a99349c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/delete-todo/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63c2cf488dc78362a8a940b2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Subject\": \"test\",\r\n    \"Description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/todos",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todo by Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Subject\": \"test\",\r\n    \"Description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/get-todo-by-status?Status=complete",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"get-todo-by-status"
+							],
+							"query": [
+								{
+									"key": "Status",
+									"value": "complete"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todo by Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Subject\": \"test\",\r\n    \"Description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/get-todo-by-date?fromDate=2023-01-13&toDate=2023-01-19",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"get-todo-by-date"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2023-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2023-01-19"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
