@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-family: Roboto;
+    font-size: 14px;
+    color:#797979;
+}
+ul{
+    list-style: none;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Roboto",sans-serif;
+    font-weight: 700;
+    color: #05364d;
+}
+.primary_btn {
+    display: inline-block;
+    background: linear-gradient(to right, #1345e6 0%, #ed239f 51%, #1345e6 100%);
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 38px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-size: 200% auto;
+}
+.primary_btn2{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #05364d;
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s ease 0s;
+}
+.primary_btn2:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    width: 50px;
+    height: 2px;
+    transition: all 0.4s ease 0s;
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+}
+.section-gap{
+    padding:140px 0;
+}
+.main-title p.top-text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+}
+.main-title{
+    margin-bottom:80px;
+}
+.main-title h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    line-height: 52px;
+    text-transform: capitalize;
+}
+/*header navbar*/
+header{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 9999;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul{
+    margin-left:140px;
+    width:100%;
+}
+.navbar ul li{
+    margin-right:40px;
+    display:inline-block;
+}
+.navbar ul li a{
+    font: 500 14px/90px "Roboto", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #05364d;
+    display: inline-block;
+}
+.navbar ul li a:hover{
+    color: #efb6df;
+    transition: all .3s ease;
+}
+/*home banner   */
+.home-banner{
+    min-height: 900px;
+    background: url('../../assets/images/banner/home-banner.png') no-repeat top center;
+    background-position: center;
+    background-size: cover;
+}
+.home-banner .row{
+    min-height: 900px;
+}
+.home-banner .banner-content{
+    text-transform: uppercase;
+}
+.home-banner .banner-content h3{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #797979;
+}
+.home-banner .banner-content h1{
+    margin-top: 20px;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.home-banner .banner-content h5{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.home-banner .banner-content .social-icons a{
+    color: rgba(5,54,77,0.5);
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+.home-banner .banner-content .social-icons a:hover{
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner-right-image {
+    padding-top: 93px;
+}
+/*Statistics*/
+.statistics{
+    position: relative;
+    margin-top:-121px;
+}
+.statistics-item{
+    background: #f8faff;
+    text-align: center;
+    padding: 30px 15px;
+}
+.statistics-item h3{
+    font-size: 27px;
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.statistics-item p{
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*Home About */
+.home-about .about-img img{
+    max-width: 100%;
+    height: auto;
+}
+.about-content .about-title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+}
+.about-content h2  {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 52px;
+    text-transform: capitalize;
+}
+.about-content .primary_btn{
+    margin-top:40px;
+}
+/*Services*/
+.services{
+    padding-bottom:110px;
+}
+.service-item{
+    padding: 60px 30px;
+    text-align: center;
+    background: #f8faff;
+    transition: all 0.4s ease 0s;
+}
+.service-item:hover{
+    background: #5f30ff;
+}
+.service-item:hover p,
+.service-item:hover h4,
+.service-item:hover a{
+    color:#fff;
+}
+.service-item:hover a:before{
+    background:#fff;
+}
+.service-item img{
+    margin-bottom: 45px;
+}
+.service-item h4{
+    color: #05364d;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    transition: all 0.4s ease 0s;
+ }
+.service-item p{
+    margin-bottom: 0px;
+    transition: all 0.4s ease 0s;
+ }
+/*footer*/
+footer{
+    background: #021017;
+    padding: 120px 0;
+    position: relative;
+}
+.footer-top{
+    text-align: center;
+}
+.footer-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-navbar ul li{
+    margin-right:40px;
+    display:inline-block;
+}
+.footer-navbar ul li a{
+    font: 500 14px/100px "Roboto", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+}
+.footer-social{
+    margin: 5px 0px 30px;
+}
+.footer-social a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 36px;
+    color: #05364d;
+    font-size: 16px;
+    margin-right: 12px;
+    transition: all 0.4s ease 0s;
+}
+.footer-social a:hover{
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+    color:#fff;
+}
+.footer-text{
+    text-align: center;
+}
