@@ -32,6 +32,11 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     border-radius: 5px;
     background-size: 200% auto;
+    border: 0;
+}
+.primary_btn:hover {
+    background-position: right center;
+    color: #fff;
 }
 .primary_btn2{
     font-size: 13px;
@@ -79,6 +84,16 @@ nav{
     background: transparent;
     z-index: 9999;
 }
+.navbar-brand a {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    color: #000;
+}
+.navbar-brand img {
+    margin-right: 5px;
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -99,10 +114,6 @@ nav{
     color: #05364d;
     display: inline-block;
 }
-.navbar ul li a:hover{
-    color: #efb6df;
-    transition: all .3s ease;
-}
 header.navbar_fixed nav {
     position: fixed;
     width: 100%;
@@ -117,6 +128,23 @@ header.navbar_fixed nav {
 }
 header.navbar_fixed ul li a{
     line-height: 60px;
+}
+.navbar-toggler{
+    visibility: hidden;
+}
+/* Page Navbar */
+.page-nav .navbar-brand a {
+    color: #fff;
+}
+.page-nav .navbar ul li a {
+    color: #fff;
+}
+header.navbar_fixed nav.page-nav{
+    background: #8034c3;
+}
+.navbar ul li a:hover{
+    color: #efb6df;
+    transition: all .3s ease;
 }
 /*home banner   */
 .home-banner{
@@ -166,6 +194,55 @@ header.navbar_fixed ul li a{
 }
 .banner-right-image {
     padding-top: 93px;
+}
+/* Page Banner */
+.page-banner{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 450px;
+    background: url('../../assets/images/banner/common-banner.png') no-repeat right bottom;
+    background-size: cover;
+    z-index: 1;
+}
+.page-banner-content{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.page-banner-content h2{
+    color: #fff;
+    font-size: 45px;
+    font-family: "Roboto",sans-serif;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.page-banner-content .page-link a{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto",sans-serif;
+    padding-left: 20px;
+    padding-right: 8px;
+    position: relative;
+}
+.page-banner-content .page-link a:first-child::before{
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\e649";
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.page-banner-content .page-link a:last-child{
+    margin-right:0;
 }
 /*Statistics*/
 .statistics{
@@ -423,4 +500,216 @@ footer{
 }
 .footer-text{
     text-align: center;
+}
+.footer-logo a {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.footer-logo img {
+    margin-right: 5px;
+}
+/* Contact Page  */
+.contact-title{
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contact-form .form-control {
+    border: 1px solid #f0e9ff;
+    border-radius: 5px;
+    height: 48px;
+    padding-left: 18px;
+    font-size: 13px;
+    background: transparent;
+}
+.contact-form textarea {
+    border-radius: 12px;
+    height: 100% !important;
+}
+.contact-form .form-group {
+    margin-bottom: 30px;
+}
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+.contact-info {
+    margin-bottom: 12px;
+}
+.contact-info__icon {
+    margin-right: 20px;
+}
+.media-body {
+    flex: 1;
+}
+.contact-info .media-body h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.contact-info .media-body h3 a {
+    color: #05364d;
+}
+.contact-info .media-body p {
+    color: #999999;
+}
+.contact-info__icon i, .contact-info__icon span {
+    color: #8f9195;
+    font-size: 27px;
+}
+
+/*=======================
+RESPONSIVE
+=========================*/
+@media (max-width: 1200px){
+    .home-about .about-img img {
+        max-width: 100%;
+        height: auto;
+    }
+    .home-banner{
+        padding: 100px 0px;
+    }
+}
+@media (max-width: 991px){
+    .collapsed:not(.show) {
+        display: none;
+    }
+    nav .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav{
+        background: #ffffff;
+        box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+    }
+    nav.page-nav {
+        background: #8034c3;
+    }
+    .navbar{
+        max-height: 340px;
+        overflow-y: scroll;
+        transition: all .3s ease;
+    }
+    .navbar ul {
+        margin-left: 0;
+    }
+    .navbar ul li {
+        line-height: 40px;
+        margin-right: 0px;
+        display: block;
+        border-bottom: 1px solid #ededed33;
+        border-radius: 0px;
+    }
+    .navbar-collapse{
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+    .navbar ul li a {
+        line-height: 40px;
+        margin-right: 0px;
+        display: block;
+        border-bottom: 1px solid #ededed33;
+        border-radius: 0px;
+    }
+    .navbar-toggler{
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        cursor: pointer;
+        margin-top: 27px;
+        margin-bottom: 23px;
+        visibility: visible;
+    }
+    .navbar-toggler i{
+        font-size: 25px;
+        color: #000;
+    }
+    .navbar-toggler i.ti-close{
+        font-size: 23px;
+        font-weight: bold;
+    }
+    
+    .home-banner .banner-right-image {
+        display: none;
+    }
+    .statistics {
+        margin-top: 0px;
+    }
+    .home-banner{
+        min-height: 700px;
+    }
+    .home-banner .row {
+        min-height: 700px;
+    }
+    .home-banner .banner-content {
+        margin-top: 150px;
+    }
+    .about-content h2 {
+        font-size: 36px;
+    }
+    .about-img {
+        display: none;
+    }
+    .services {
+        padding-bottom: 50px;
+    }
+    .section-gap {
+        padding: 80px 0;
+    }
+    .main-title h2 br {
+        display: none;
+    }
+    .testimonial{
+        padding-bottom: 180px;
+    }
+    .testimonial-slider::after{
+        display:none;
+    }
+    .main-title {
+        margin-bottom: 40px;
+    }
+    .testimonial-item {
+        margin-top: 30px;
+    }
+    .brands{
+        margin-bottom: 80px;
+    }
+
+}
+@media (max-width: 767px){
+    .home-banner{
+        background: #fff;
+        min-height: 300px;
+    }
+    .home-banner .row{
+        min-height: 300px;
+        padding-top:60px;
+    }
+    .home-banner .banner-content{
+        margin-top:0;
+    }
+    .home-banner .banner-content h3{
+        font-size: 30px;
+    }
+    .home-banner .banner-content h1{
+        font-size: 35px;
+        line-height: 42px;
+    }
+    .main-title h2 {
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .about-content h2 {
+        font-size: 26px;
+        margin-bottom:20px;
+    }
+    footer{
+        padding:80px;
+    }
 }

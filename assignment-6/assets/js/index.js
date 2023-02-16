@@ -67,3 +67,13 @@ $(window).on('load', function () {
         });
     }
 });
+$(document).on('click', '.navbar-toggler i.ti-menu', function(){
+    $('.navbar').addClass('show');
+    $('.navbar-toggler i').removeClass('ti-menu');
+    $('.navbar-toggler i').addClass('ti-close');
+});
+$(document).on('click', '.navbar-toggler i.ti-close', function(){
+    $('.navbar').removeClass('show');
+    $('.navbar-toggler i').addClass('ti-menu');
+    $('.navbar-toggler i').removeClass('ti-close');
+});
